@@ -4,7 +4,7 @@
     "name": "WhatSend",
     "short_name": "WhatSend",
     "scope": "/WhatSend/",
-    "display": "browser",
+    "display": "standalones",
     "start_url": "https://bilal8492.github.io/WhatSend/",
     "background_color": "transparent",
     "theme_color": "transparent",
