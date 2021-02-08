@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/WhatSend/static/css/main.92ee9db6.chunk.css",
+    "main.js": "/WhatSend/static/js/main.8daa041e.chunk.js",
+    "main.js.map": "/WhatSend/static/js/main.8daa041e.chunk.js.map",
+    "runtime-main.js": "/WhatSend/static/js/runtime-main.6fbbc45d.js",
+    "runtime-main.js.map": "/WhatSend/static/js/runtime-main.6fbbc45d.js.map",
+    "static/js/2.0fb619c2.chunk.js": "/WhatSend/static/js/2.0fb619c2.chunk.js",
+    "static/js/2.0fb619c2.chunk.js.map": "/WhatSend/static/js/2.0fb619c2.chunk.js.map",
+    "static/js/3.87ef825a.chunk.js": "/WhatSend/static/js/3.87ef825a.chunk.js",
+    "static/js/3.87ef825a.chunk.js.map": "/WhatSend/static/js/3.87ef825a.chunk.js.map",
+    "index.html": "/WhatSend/index.html",
+    "service-worker.js": "/WhatSend/service-worker.js",
+    "service-worker.js.map": "/WhatSend/service-worker.js.map",
+    "static/css/main.92ee9db6.chunk.css.map": "/WhatSend/static/css/main.92ee9db6.chunk.css.map",
+    "static/js/2.0fb619c2.chunk.js.LICENSE.txt": "/WhatSend/static/js/2.0fb619c2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6fbbc45d.js",
+    "static/js/2.0fb619c2.chunk.js",
+    "static/css/main.92ee9db6.chunk.css",
+    "static/js/main.8daa041e.chunk.js"
+  ]
+}
