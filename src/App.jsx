@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { useState, useEffect } from "react";
 
@@ -51,7 +50,7 @@ function App() {
           <p>Send Whatsapp messages without saving contact number.</p>
           <div id="number">
             <img id="flag" src={flagUrl} alt="country flaf" width="30px" />
-
+            <label>
             <select value={countryCode} id="countries" onChange={(e) => changeFlag(e)}>
               {countries.map((country) => (
                 <option key={country.alpha3Code}
@@ -62,6 +61,8 @@ function App() {
                 </option>
               ))}
             </select>
+            </label>
+            <label>
             <input
               onChange={(c) => setNumber(c.target.value)}
               type="tel"
@@ -71,6 +72,7 @@ function App() {
               id="mobile-number"
               required
             />
+            </label>
           </div>
           <button onClick={openWhatsapp} id="message">
             <img src="logo.svg" alt="logo" /> <span>Send Message</span>{" "}
@@ -84,17 +86,17 @@ function App() {
         </p>
         <p style={{ marginTop: 0 }}>
           Created with <img width="20" src="heart.svg" alt="heart" /> by{" "}
-          <a href="https://twitter.com/bilal8492" target="_blank">
+          <a rel="noopener" href="https://twitter.com/bilal8492" target="_blank">
             Bilal
           </a>
           . Source code available at{" "}
-          <a href="https://github.com/bilal8492/whatSend" target="_blank">
+          <a rel="noopener" href="https://github.com/bilal8492/whatSend" target="_blank">
             Github
           </a>
         </p>
         <p style={{ marginTop: 0 }}>
           For any feedback and bug report create an{" "}
-          <a
+          <a rel="noopener"
             href="https://github.com/bilal8492/WhatSend/issues"
             target="_blank"
           >
