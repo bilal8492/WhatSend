@@ -3,47 +3,49 @@
  * 2. Remove the margin in Firefox and Safari.
  */
 
- button,
- input,
- optgroup,
- select,
- textarea {
-   font-family: inherit; /* 1 */
-   font-size: 100%; /* 1 */
-   line-height: 1.15; /* 1 */
-   margin: 0; /* 2 */
- }
- 
- /**
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
   * Show the overflow in IE.
   * 1. Show the overflow in Edge.
   */
- 
- button,
- input { /* 1 */
-   overflow: visible;
- }
- 
- /**
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
   * Remove the inheritance of text transform in Edge, Firefox, and IE.
   * 1. Remove the inheritance of text transform in Firefox.
   */
- 
- button,
- select { /* 1 */
-   text-transform: none;
- }
- 
- /**
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
   * Correct the inability to style clickable types in iOS and Safari.
   */
- 
- button,
- [type="button"],
- [type="reset"],
- [type="submit"] {
-   -webkit-appearance: button;
- }
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
 
 body {
   background-color: #e5e5e5;
@@ -98,9 +100,9 @@ body {
   font-size: 19px;
 }
 #message {
-  display: flex; 
+  display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 #message img {
@@ -120,6 +122,11 @@ footer {
   margin: 0 auto;
   font-size: 18px;
   background-color: rgba(0, 150, 136, 0.4);
+}
+
+.logo {
+  width: 52px;
+  height: 52px;
 }
 
 @media (max-width: 750px) {
@@ -149,10 +156,11 @@ footer {
     padding: 5%;
     text-align: center;
   }
-  #number > #flag, #countries {
+  #number > #flag,
+  #countries {
     margin-right: 0;
   }
   #mobile-number {
     text-align: center;
-}
+  }
 }
