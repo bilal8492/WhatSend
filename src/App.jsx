@@ -49,7 +49,7 @@ function App() {
   return (
     <div className="App">
       <div id="heading">
-        <img src="logo.svg" alt="logo" />
+        <img src="logo192.png" alt="logo" />
         <h1> WhatSend! </h1>
       </div>
       <div id="main">
@@ -85,7 +85,7 @@ function App() {
 
           </div>
           <button onClick={openWhatsapp} id="message">
-            <img src="logo.svg" alt="logo" /> <span>Send Message</span>{" "}
+            <img src="logo192.png" alt="logo" /> <span>Send Message</span>{" "}
           </button>
         </div>
       </div>
