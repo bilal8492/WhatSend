@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [countries, setCountries] = useState([]);
-  const [number, setNumber] = useState([]);
+  const [number, setNumber] = useState('');
   const [countryCode, setCountryCode] = useState(91);
   const [flagUrl, setFlagUrl] = useState(
     "https://restcountries.eu/data/ind.svg"
@@ -23,6 +23,13 @@ function App() {
     const data = await res.json();
     return data;
   };
+
+  const onNumberType = (e) => {
+    let num = e.target.value;
+    num = num.replace(/\s/g, '')
+    num = num.replace(`+${countryCode}`, '')
+    setNumber(num);
+  }
 
   const changeFlag = (e) => {
     var index = e.target.selectedIndex;
@@ -51,28 +58,31 @@ function App() {
           <div id="number">
             <img id="flag" src={flagUrl} alt="country flaf" width="30px" />
             <label>
-            <select value={countryCode} id="countries" onChange={(e) => changeFlag(e)}>
-              {countries.map((country) => (
-                <option key={country.alpha3Code}
-                  data-alpha3code={country.alpha3Code}
-                  value={country.callingCodes}
-                >
-                  +{country.callingCodes} {country.name}
-                </option>
-              ))}
-            </select>
+              <select value={countryCode} id="countries" onChange={(e) => changeFlag(e)}>
+                {countries.map((country) => (
+                  <option key={country.alpha3Code}
+                    data-alpha3code={country.alpha3Code}
+                    value={country.callingCodes}
+                  >
+                    +{country.callingCodes} {country.name}
+                  </option>
+                ))}
+              </select>
             </label>
             <label>
-            <input
-              onChange={(c) => setNumber(c.target.value)}
-              type="tel"
-              minLength="5"
-              maxLength="10"
-              placeholder="Enter your number!"
-              id="mobile-number"
-              required
-            />
+              <input
+                value={number}
+                onChange={onNumberType}
+                type="tel"
+                minLength="5"
+                maxLength="15"
+                placeholder="Enter your number!"
+                id="mobile-number"
+                required
+              />
             </label>
+            <br />
+
           </div>
           <button onClick={openWhatsapp} id="message">
             <img src="logo.svg" alt="logo" /> <span>Send Message</span>{" "}
