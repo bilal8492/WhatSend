@@ -49,7 +49,7 @@ function App() {
   return (
     <div className="App">
       <div id="heading">
-        <img src="logo192.png" alt="logo" />
+        <img src="logo192.png" alt="logo" className="logo" />
         <h1> WhatSend! </h1>
       </div>
       <div id="main">
