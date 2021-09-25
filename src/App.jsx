@@ -7,7 +7,7 @@ function App() {
   const [number, setNumber] = useState('');
   const [countryCode, setCountryCode] = useState(91);
   const [flagUrl, setFlagUrl] = useState(
-    "https://restcountries.eu/data/ind.svg"
+    "https://restcountries.com/data/ind.svg"
   );
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function App() {
   }, []);
 
   const fetchCountries = async () => {
-    const res = await fetch(`https://restcountries.eu/rest/v2/all`);
+    const res = await fetch(`https://restcountries.com/v2/all`);
     const data = await res.json();
     return data;
   };
@@ -36,7 +36,7 @@ function App() {
     var alpha3Code = e.target.childNodes[index].getAttribute("data-alpha3code");
     var country = countries.filter((c) => c.alpha3Code.includes(alpha3Code));
     setCountryCode(e.target.value);
-    setFlagUrl(country[0].flag);
+    setFlagUrl(country[0].flags[0]);
   };
 
   const openWhatsapp = () => {
