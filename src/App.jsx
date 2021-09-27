@@ -54,23 +54,31 @@ function App() {
       </div>
       <div id="main">
         <div id="container">
-          <p>Send Whatsapp messages without saving contact number.</p>
+          <div className='text'>
+            <p>Send <strong>Whatsapp</strong> messages without saving contact number.</p>
+          </div>
           <div id="number">
-            <img id="flag" src={flagUrl} alt="country flaf" width="30px" />
-            <label>
-              <select value={countryCode} id="countries" onChange={(e) => changeFlag(e)}>
-                {countries.map((country) => (
-                  <option key={country.alpha3Code}
-                    data-alpha3code={country.alpha3Code}
-                    value={country.callingCodes}
-                  >
-                    +{country.callingCodes} {country.name}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label>
+            <div className="flag-code">
+              <div id="flag">
+                <img src={flagUrl} alt="country flaf" />
+              </div>
+              <div className="countries">
+                <select value={countryCode} id="countries" onChange={(e) => changeFlag(e)}>
+                  {countries.map((country) => (
+                    <option key={country.alpha3Code}
+                      data-alpha3code={country.alpha3Code}
+                      value={country.callingCodes}
+                    >
+                      +{country.callingCodes} {country.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            <div className='input'>
+
               <input
+                className='shadow'
                 value={number}
                 onChange={onNumberType}
                 type="tel"
@@ -80,13 +88,12 @@ function App() {
                 id="mobile-number"
                 required
               />
-            </label>
-            <br />
 
+            </div>
+            <button onClick={openWhatsapp} id="message">
+              <img src="logo192.png" alt="logo" /> <span>Send Message</span>{" "}
+            </button>
           </div>
-          <button onClick={openWhatsapp} id="message">
-            <img src="logo192.png" alt="logo" /> <span>Send Message</span>{" "}
-          </button>
         </div>
       </div>
       <footer>
