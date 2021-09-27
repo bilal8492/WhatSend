@@ -50,6 +50,12 @@ button,
 [type="submit"] {
   -webkit-appearance: button;
 }
+.App {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+}
 
 body {
   background-color: #e5e5e5;
