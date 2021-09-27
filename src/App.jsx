@@ -96,7 +96,7 @@ function App() {
           </div>
           <footer>
             <p>
-              This application is not associated with WhatsApp and It uses WhatsApp
+              This application is not associated with <strong>WhatsApp</strong> and It uses <strong>WhatsApp </strong>
               api to redirect the contact number.
             </p>
             <p style={{ marginTop: 0 }}>
