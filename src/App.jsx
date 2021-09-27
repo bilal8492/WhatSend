@@ -94,33 +94,33 @@ function App() {
               <img src="logo192.png" alt="logo" /> <span>Send Message</span>{" "}
             </button>
           </div>
+          <footer>
+            <p>
+              This application is not associated with WhatsApp and It uses WhatsApp
+              api to redirect the contact number.
+            </p>
+            <p style={{ marginTop: 0 }}>
+              Created with <img width="20" src="heart.svg" alt="heart" /> by{" "}
+              <a rel="noopener" href="https://twitter.com/bilal8492" target="_blank">
+                Bilal
+              </a>
+              . Source code available at{" "}
+              <a rel="noopener" href="https://github.com/bilal8492/whatSend" target="_blank">
+                Github
+              </a>
+            </p>
+            <p style={{ marginTop: 0 }}>
+              For any feedback and bug report create an{" "}
+              <a rel="noopener"
+                href="https://github.com/bilal8492/WhatSend/issues"
+                target="_blank"
+              >
+                Issue
+              </a>
+            </p>
+          </footer>
         </div>
       </div>
-      <footer>
-        <p>
-          This application is not associated with WhatsApp and It uses WhatsApp
-          api to redirect the contact number.
-        </p>
-        <p style={{ marginTop: 0 }}>
-          Created with <img width="20" src="heart.svg" alt="heart" /> by{" "}
-          <a rel="noopener" href="https://twitter.com/bilal8492" target="_blank">
-            Bilal
-          </a>
-          . Source code available at{" "}
-          <a rel="noopener" href="https://github.com/bilal8492/whatSend" target="_blank">
-            Github
-          </a>
-        </p>
-        <p style={{ marginTop: 0 }}>
-          For any feedback and bug report create an{" "}
-          <a rel="noopener"
-            href="https://github.com/bilal8492/WhatSend/issues"
-            target="_blank"
-          >
-            Issue
-          </a>
-        </p>
-      </footer>
     </div>
   );
 }

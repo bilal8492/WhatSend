@@ -58,7 +58,7 @@ button,
 }
 
 body {
-  background-color: #e5e5e5;
+  background-color: #e6ffee;
 }
 #main {
   display: flex;
@@ -69,18 +69,40 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2%;
 }
 #container {
+  position: relative;
   width: 889px;
-  height: 500px;
-  background-color: #009688;
+  height: 600px;
+  /* background-color: #009688; */
+  background-color: darkcyan;
   display: flex;
   align-items: center;
   flex-direction: column;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  -webkit-box-shadow: -8px 2px 5px -4px rgba(51, 38, 38, 0.75);
+  border-radius: 10px;
+  -webkit-box-shadow: -6px 6px 7px -3px rgba(125, 125, 125, 0.75);
 }
+
+#container::before {
+  content: "";
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  background-size: auto;
+  background-repeat: repeat no-repeat;
+  background-position: 26vw bottom;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  117' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 86L50 81C100 76 200 65 300 44C400 23 500 -9 600 2C700 12 800 65 900 86C1000 107 1100 97 1150 91L1200 86V118H1150C1100 118 1000 118 900 118C800 118 700 118 600 118C500 118 400 118 300 118C200 118 100 118 50 118H0V86Z' fill='%23ffffff'/></svg>");
+}
+
+@media (max-width: 850px) {
+  #container::before {
+    height: 20px;
+  }
+}
+
 #container > p {
   font-size: 30px;
   color: aliceblue;
@@ -127,7 +149,7 @@ body {
   border-top-right-radius: 10px;
 }
 .text > p > strong {
-  color: #009688;
+  color: darkcyan;
 }
 .text > p {
   font-size: 18px;
@@ -139,11 +161,15 @@ body {
 }
 
 #countries {
-  width: 130px;
-  padding: 8px;
+  width: 230px;
+  padding: 5px 8px;
   font-size: 20px;
   border-radius: 7px;
   -webkit-box-shadow: -2px 2px 5px 2px rgb(69 71 86 / 75%);
+  background-color: ghostwhite;
+}
+#countries:focus {
+  outline: 0;
 }
 .countries {
   margin-bottom: 10%;
@@ -154,6 +180,7 @@ body {
   justify-content: center;
 }
 .input > input {
+  background-color: ghostwhite;
   border: none;
 }
 .input > input:focus {
@@ -171,6 +198,7 @@ body {
   border-radius: 5px;
   -webkit-box-shadow: -2px 2px 5px 2px rgb(69 71 86 / 75%);
   border: none;
+  background-color: ghostwhite;
 }
 
 #message:focus {
@@ -190,17 +218,17 @@ body {
 }
 
 footer {
-  width: 869px;
+  width: 97.8%;
   padding: 10px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 auto;
   font-size: 18px;
-  background-color: rgba(0, 150, 136, 0.4);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* background-color: rgba(0, 150, 136, 0.4); */
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  -webkit-box-shadow: -2px 2px 5px 2px rgb(69 71 86 / 75%);
+  background-color: #fff;
 }
 
 .logo {
