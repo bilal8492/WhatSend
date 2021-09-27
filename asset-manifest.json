@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/WhatSend/static/css/main.49d8e635.chunk.css",
-    "main.js": "/WhatSend/static/js/main.14a6d8c3.chunk.js",
-    "main.js.map": "/WhatSend/static/js/main.14a6d8c3.chunk.js.map",
+    "main.css": "/WhatSend/static/css/main.a12a0a22.chunk.css",
+    "main.js": "/WhatSend/static/js/main.da23e402.chunk.js",
+    "main.js.map": "/WhatSend/static/js/main.da23e402.chunk.js.map",
     "runtime-main.js": "/WhatSend/static/js/runtime-main.a6fdb6a1.js",
     "runtime-main.js.map": "/WhatSend/static/js/runtime-main.a6fdb6a1.js.map",
     "static/js/2.0bb09219.chunk.js": "/WhatSend/static/js/2.0bb09219.chunk.js",
@@ -12,13 +12,13 @@
     "index.html": "/WhatSend/index.html",
     "service-worker.js": "/WhatSend/service-worker.js",
     "service-worker.js.map": "/WhatSend/service-worker.js.map",
-    "static/css/main.49d8e635.chunk.css.map": "/WhatSend/static/css/main.49d8e635.chunk.css.map",
+    "static/css/main.a12a0a22.chunk.css.map": "/WhatSend/static/css/main.a12a0a22.chunk.css.map",
     "static/js/2.0bb09219.chunk.js.LICENSE.txt": "/WhatSend/static/js/2.0bb09219.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a6fdb6a1.js",
     "static/js/2.0bb09219.chunk.js",
-    "static/css/main.49d8e635.chunk.css",
-    "static/js/main.14a6d8c3.chunk.js"
+    "static/css/main.a12a0a22.chunk.css",
+    "static/js/main.da23e402.chunk.js"
   ]
 }
