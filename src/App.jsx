@@ -54,23 +54,31 @@ function App() {
       </div>
       <div id="main">
         <div id="container">
-          <p>Send Whatsapp messages without saving contact number.</p>
+          <div className='text'>
+            <p>Send <strong>Whatsapp</strong> messages without saving contact number.</p>
+          </div>
           <div id="number">
-            <img id="flag" src={flagUrl} alt="country flaf" width="30px" />
-            <label>
-              <select value={countryCode} id="countries" onChange={(e) => changeFlag(e)}>
-                {countries.map((country) => (
-                  <option key={country.alpha3Code}
-                    data-alpha3code={country.alpha3Code}
-                    value={country.callingCodes}
-                  >
-                    +{country.callingCodes} {country.name}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label>
+            <div className="flag-code">
+              <div id="flag">
+                <img src={flagUrl} alt="country flag" />
+              </div>
+              <div className="countries">
+                <select value={countryCode} id="countries" onChange={(e) => changeFlag(e)}>
+                  {countries.map((country) => (
+                    <option key={country.alpha3Code}
+                      data-alpha3code={country.alpha3Code}
+                      value={country.callingCodes}
+                    >
+                      +{country.callingCodes} {country.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            <div className='input'>
+
               <input
+                className='shadow'
                 value={number}
                 onChange={onNumberType}
                 type="tel"
@@ -80,40 +88,41 @@ function App() {
                 id="mobile-number"
                 required
               />
-            </label>
-            <br />
 
+            </div>
+            <button onClick={openWhatsapp} id="message">
+              <img src="logo192.png" alt="logo" /> <strong>Send Message</strong>{" "}
+            </button>
           </div>
-          <button onClick={openWhatsapp} id="message">
-            <img src="logo192.png" alt="logo" /> <span>Send Message</span>{" "}
-          </button>
+          <footer>
+            <div id='footer-main'>
+              <p>
+                This application is not associated with <strong>WhatsApp</strong> and It uses <strong>WhatsApp </strong>
+                api to redirect the contact number.
+              </p>
+              <p style={{ marginTop: 0 }}>
+                Created with <img width="20" src="heart.svg" alt="heart" /> by{" "}
+                <a rel="noopener" href="https://twitter.com/bilal8492" target="_blank">
+                  Bilal
+                </a>
+                . Source code available at{" "}
+                <a rel="noopener" href="https://github.com/bilal8492/whatSend" target="_blank">
+                  Github
+                </a>
+              </p>
+              <p style={{ marginTop: 0 }}>
+                For any feedback and bug report create an{" "}
+                <a rel="noopener"
+                  href="https://github.com/bilal8492/WhatSend/issues"
+                  target="_blank"
+                >
+                  Issue
+                </a>
+              </p>
+            </div>
+          </footer>
         </div>
       </div>
-      <footer>
-        <p>
-          This application is not associated with WhatsApp and It uses WhatsApp
-          api to redirect the contact number.
-        </p>
-        <p style={{ marginTop: 0 }}>
-          Created with <img width="20" src="heart.svg" alt="heart" /> by{" "}
-          <a rel="noopener" href="https://twitter.com/bilal8492" target="_blank">
-            Bilal
-          </a>
-          . Source code available at{" "}
-          <a rel="noopener" href="https://github.com/bilal8492/whatSend" target="_blank">
-            Github
-          </a>
-        </p>
-        <p style={{ marginTop: 0 }}>
-          For any feedback and bug report create an{" "}
-          <a rel="noopener"
-            href="https://github.com/bilal8492/WhatSend/issues"
-            target="_blank"
-          >
-            Issue
-          </a>
-        </p>
-      </footer>
     </div>
   );
 }

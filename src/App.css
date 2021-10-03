@@ -2,6 +2,10 @@
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
  */
+* {
+  margin: 0;
+  padding: 0;
+}
 
 button,
 input,
@@ -46,9 +50,15 @@ button,
 [type="submit"] {
   -webkit-appearance: button;
 }
+.App {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+}
 
 body {
-  background-color: #e5e5e5;
+  background-color: #ccffff;
 }
 #main {
   display: flex;
@@ -59,41 +69,122 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2%;
 }
 #container {
+  position: relative;
   width: 889px;
-  height: 500px;
-  background-color: #009688;
+  height: 600px;
+  /* background-color: #009688; */
+  background-color: darkcyan;
   display: flex;
   align-items: center;
   flex-direction: column;
+  border-radius: 10px;
+  -webkit-box-shadow: -6px 6px 7px -3px rgba(125, 125, 125, 0.75);
 }
+
+#container::before {
+  content: "";
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  background-size: auto;
+  background-repeat: repeat no-repeat;
+  background-position: 26vw bottom;
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  117' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 86L50 81C100 76 200 65 300 44C400 23 500 -9 600 2C700 12 800 65 900 86C1000 107 1100 97 1150 91L1200 86V118H1150C1100 118 1000 118 900 118C800 118 700 118 600 118C500 118 400 118 300 118C200 118 100 118 50 118H0V86Z' fill='%23ffffff'/></svg>");
+}
+
+@media (max-width: 850px) {
+  #container::before {
+    height: 20px;
+  }
+}
+
 #container > p {
   font-size: 30px;
   color: aliceblue;
 }
 #number {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 365px;
-  margin-top: 100px;
-  margin-right: 102px;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  /* align-items: center; */
 }
-#number > #flag {
+.flag-code {
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+}
+#flag {
+}
+#flag > img {
+  height: 40px;
+  width: 60px;
+  margin-bottom: 30%;
+  border-radius: 5px;
+  -webkit-box-shadow: -5px 2px 5px 0px rgb(69 71 86 / 75%);
+}
+/* #number > #flag {
   margin-right: 20px;
   zoom: 2;
-}
+} */
 #container > button {
   padding: 15px;
   margin-top: 35px;
 }
 
+.text {
+  height: 40px;
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.text > p > strong {
+  color: darkcyan;
+}
+.text > p {
+  font-size: 18px;
+}
+
+.shadow {
+  border-radius: 5px;
+  -webkit-box-shadow: -2px 2px 5px 2px rgb(69 71 86 / 75%);
+}
+
 #countries {
-  width: 130px;
-  padding: 8px;
+  width: 230px;
+  padding: 5px 8px;
   font-size: 20px;
-  margin-right: 35px;
+  border-radius: 7px;
+  -webkit-box-shadow: -2px 2px 5px 2px rgb(69 71 86 / 75%);
+  background-color: ghostwhite;
+}
+#countries:focus {
+  outline: 0;
+}
+.countries {
+  margin-bottom: 10%;
+}
+.input {
+  margin-bottom: 15%;
+  display: flex;
+  justify-content: center;
+}
+.input > input {
+  background-color: ghostwhite;
+  border: none;
+}
+.input > input:focus {
+  outline: 0;
 }
 #mobile-number {
   padding: 8px;
@@ -103,6 +194,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px 30px;
+  border-radius: 5px;
+  -webkit-box-shadow: -2px 2px 5px 2px rgb(69 71 86 / 75%);
+  border: none;
+  background-color: ghostwhite;
+}
+
+#message:focus {
+  outline: 0;
+}
+
+#message:active {
+  transform: scale(0.98);
 }
 
 #message img {
@@ -114,26 +218,47 @@ body {
 }
 
 footer {
-  width: 869px;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 auto;
+  width: 100%;
+  /* padding: 10px; */
   font-size: 18px;
-  background-color: rgba(0, 150, 136, 0.4);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* background-color: rgba(0, 150, 136, 0.4); */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #fff;
+}
+footer > #footer-main > p > strong {
+  color: darkcyan;
+}
+footer > #footer-main > p > a {
+  text-decoration: none;
+  font-weight: 500;
+  color: rgb(18, 15, 230);
+}
+#footer-main {
+  margin: 10px;
 }
 
 .logo {
   width: 52px;
   height: 52px;
 }
-
+@media (max-width: 878px) {
+  #container::before {
+    bottom: 19%;
+  }
+}
 @media (max-width: 750px) {
   #container {
-    width: 90%;
-    height: auto;
-    padding: 5%;
+    width: 95%;
+    /* height: auto; */
+    /* padding: 5%; */
+  }
+  #container::before {
+    bottom: 17.2%;
   }
 
   #container > p {
@@ -141,20 +266,26 @@ footer {
     color: aliceblue;
     text-align: center;
   }
+  .text > p {
+    font-size: 16px;
+  }
 
   #number {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     width: 365px;
     height: 149px;
-    margin: 0;
+    margin: 0; */
   }
   footer {
-    width: 90%;
-    padding: 5%;
+    width: 100%;
+    padding: 0;
     text-align: center;
+  }
+  footer > #footer-main > p {
+    font-size: 16px;
   }
   #number > #flag,
   #countries {
@@ -162,5 +293,39 @@ footer {
   }
   #mobile-number {
     text-align: center;
+  }
+}
+@media (max-width: 479px) {
+  #container::before {
+    bottom: 16%;
+  }
+  footer > #footer-main > p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 440px) {
+  .text > P {
+    font-size: 14px;
+  }
+  footer > #footer-main > p {
+    font-size: 14px;
+  }
+  #container::before {
+    bottom: 16%;
+  }
+}
+@media (max-width: 424px) {
+  #container::before {
+    bottom: 19%;
+  }
+}
+@media (max-width: 382px) {
+  .text > P {
+    font-size: 13px;
+  }
+}
+@media (max-width: 371px) {
+  #container::before {
+    bottom: 22%;
   }
 }
