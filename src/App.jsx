@@ -7,7 +7,7 @@ function App() {
   const [number, setNumber] = useState('');
   const [countryCode, setCountryCode] = useState(91);
   const [flagUrl, setFlagUrl] = useState(
-    "https://restcountries.com/data/ind.svg"
+    "https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg"
   );
 
   useEffect(() => {
@@ -36,7 +36,7 @@ function App() {
     var alpha3Code = e.target.childNodes[index].getAttribute("data-alpha3code");
     var country = countries.filter((c) => c.alpha3Code.includes(alpha3Code));
     setCountryCode(e.target.value);
-    setFlagUrl(country[0].flags[0]);
+    setFlagUrl(country[0].flag);
   };
 
   const openWhatsapp = () => {
