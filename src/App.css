@@ -213,13 +213,13 @@ footer {
 footer::before {
   content: "";
   width: 100%;
-  height: 40px;
+  height: 30px;
   position: absolute;
-  bottom: 99%;
+  bottom: 97%;
   left: 0;
   background-size: auto;
   background-repeat: repeat no-repeat;
-  background-position: 26vw bottom;
+  background-position: 40vw bottom;
   background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  117' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 86L50 81C100 76 200 65 300 44C400 23 500 -9 600 2C700 12 800 65 900 86C1000 107 1100 97 1150 91L1200 86V118H1150C1100 118 1000 118 900 118C800 118 700 118 600 118C500 118 400 118 300 118C200 118 100 118 50 118H0V86Z' fill='%23ffffff'/></svg>");
 }
 footer > #footer-main > p > strong {
