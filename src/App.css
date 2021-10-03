@@ -218,8 +218,8 @@ body {
 }
 
 footer {
-  width: 97.8%;
-  padding: 10px;
+  width: 100%;
+  /* padding: 10px; */
   font-size: 18px;
   position: absolute;
   bottom: 0;
@@ -230,20 +230,35 @@ footer {
   border-bottom-right-radius: 10px;
   background-color: #fff;
 }
-footer > p > strong {
+footer > #footer-main > p > strong {
   color: darkcyan;
+}
+footer > #footer-main > p > a {
+  text-decoration: none;
+  font-weight: 500;
+  color: rgb(18, 15, 230);
+}
+#footer-main {
+  margin: 10px;
 }
 
 .logo {
   width: 52px;
   height: 52px;
 }
-
+@media (max-width: 878px) {
+  #container::before {
+    bottom: 19%;
+  }
+}
 @media (max-width: 750px) {
   #container {
-    width: 90%;
-    height: auto;
-    padding: 5%;
+    width: 95%;
+    /* height: auto; */
+    /* padding: 5%; */
+  }
+  #container::before {
+    bottom: 17.2%;
   }
 
   #container > p {
@@ -251,20 +266,26 @@ footer > p > strong {
     color: aliceblue;
     text-align: center;
   }
+  .text > p {
+    font-size: 16px;
+  }
 
   #number {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     width: 365px;
     height: 149px;
-    margin: 0;
+    margin: 0; */
   }
   footer {
-    width: 90%;
-    padding: 5%;
+    width: 100%;
+    padding: 0;
     text-align: center;
+  }
+  footer > #footer-main > p {
+    font-size: 16px;
   }
   #number > #flag,
   #countries {
@@ -272,5 +293,39 @@ footer > p > strong {
   }
   #mobile-number {
     text-align: center;
+  }
+}
+@media (max-width: 479px) {
+  #container::before {
+    bottom: 16%;
+  }
+  footer > #footer-main > p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 440px) {
+  .text > P {
+    font-size: 14px;
+  }
+  footer > #footer-main > p {
+    font-size: 14px;
+  }
+  #container::before {
+    bottom: 16%;
+  }
+}
+@media (max-width: 424px) {
+  #container::before {
+    bottom: 19%;
+  }
+}
+@media (max-width: 382px) {
+  .text > P {
+    font-size: 13px;
+  }
+}
+@media (max-width: 371px) {
+  #container::before {
+    bottom: 22%;
   }
 }

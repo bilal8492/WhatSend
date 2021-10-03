@@ -7,7 +7,7 @@ function App() {
   const [number, setNumber] = useState('');
   const [countryCode, setCountryCode] = useState(91);
   const [flagUrl, setFlagUrl] = useState(
-    "https://restcountries.com/data/ind.svg"
+    "https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg"
   );
 
   useEffect(() => {
@@ -36,7 +36,7 @@ function App() {
     var alpha3Code = e.target.childNodes[index].getAttribute("data-alpha3code");
     var country = countries.filter((c) => c.alpha3Code.includes(alpha3Code));
     setCountryCode(e.target.value);
-    setFlagUrl(country[0].flags[0]);
+    setFlagUrl(country[0].flag);
   };
 
   const openWhatsapp = () => {
@@ -60,7 +60,7 @@ function App() {
           <div id="number">
             <div className="flag-code">
               <div id="flag">
-                <img src={flagUrl} alt="country flaf" />
+                <img src={flagUrl} alt="country flag" />
               </div>
               <div className="countries">
                 <select value={countryCode} id="countries" onChange={(e) => changeFlag(e)}>
@@ -91,33 +91,35 @@ function App() {
 
             </div>
             <button onClick={openWhatsapp} id="message">
-              <img src="logo192.png" alt="logo" /> <span>Send Message</span>{" "}
+              <img src="logo192.png" alt="logo" /> <strong>Send Message</strong>{" "}
             </button>
           </div>
           <footer>
-            <p>
-              This application is not associated with <strong>WhatsApp</strong> and It uses <strong>WhatsApp </strong>
-              api to redirect the contact number.
-            </p>
-            <p style={{ marginTop: 0 }}>
-              Created with <img width="20" src="heart.svg" alt="heart" /> by{" "}
-              <a rel="noopener" href="https://twitter.com/bilal8492" target="_blank">
-                Bilal
-              </a>
-              . Source code available at{" "}
-              <a rel="noopener" href="https://github.com/bilal8492/whatSend" target="_blank">
-                Github
-              </a>
-            </p>
-            <p style={{ marginTop: 0 }}>
-              For any feedback and bug report create an{" "}
-              <a rel="noopener"
-                href="https://github.com/bilal8492/WhatSend/issues"
-                target="_blank"
-              >
-                Issue
-              </a>
-            </p>
+            <div id='footer-main'>
+              <p>
+                This application is not associated with <strong>WhatsApp</strong> and It uses <strong>WhatsApp </strong>
+                api to redirect the contact number.
+              </p>
+              <p style={{ marginTop: 0 }}>
+                Created with <img width="20" src="heart.svg" alt="heart" /> by{" "}
+                <a rel="noopener" href="https://twitter.com/bilal8492" target="_blank">
+                  Bilal
+                </a>
+                . Source code available at{" "}
+                <a rel="noopener" href="https://github.com/bilal8492/whatSend" target="_blank">
+                  Github
+                </a>
+              </p>
+              <p style={{ marginTop: 0 }}>
+                For any feedback and bug report create an{" "}
+                <a rel="noopener"
+                  href="https://github.com/bilal8492/WhatSend/issues"
+                  target="_blank"
+                >
+                  Issue
+                </a>
+              </p>
+            </div>
           </footer>
         </div>
       </div>
