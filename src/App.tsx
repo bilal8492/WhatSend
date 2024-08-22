@@ -1,6 +1,8 @@
-import React from "react";
-import "./App.css";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from 'react'
+
+import heart from '/heart.svg'
+
+import './App.css'
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -24,17 +26,17 @@ function App() {
     return data;
   };
 
-  const onNumberType = (e) => {
+  const onNumberType = (e : any) => {
     let num = e.target.value;
     num = num.replace(/\s/g, '')
     num = num.replace(`+${countryCode}`, '')
     setNumber(num);
   }
 
-  const changeFlag = (e) => {
+  const changeFlag = (e : any) => {
     var index = e.target.selectedIndex;
     var alpha3Code = e.target.childNodes[index].getAttribute("data-alpha3code");
-    var country = countries.filter((c) => c.alpha3Code.includes(alpha3Code));
+    var country : any = countries.filter((c : any) => c.alpha3Code.includes(alpha3Code));
     setCountryCode(e.target.value);
     setFlagUrl(country[0].flag);
   };
@@ -49,7 +51,7 @@ function App() {
   return (
     <div className="App">
       <div id="heading">
-        <img src="logo192.png" alt="logo" className="logo" />
+        <img src="pwa-192x192.png" alt="logo" className="logo" />
         <h1> WhatSend! </h1>
       </div>
       <div id="main">
@@ -64,7 +66,7 @@ function App() {
               </div>
               <div className="countries">
                 <select value={countryCode} id="countries" onChange={(e) => changeFlag(e)}>
-                  {countries.map((country) => (
+                  {countries.map((country : any) => (
                     <option key={country.alpha3Code}
                       data-alpha3code={country.alpha3Code}
                       value={country.callingCodes}
@@ -82,8 +84,8 @@ function App() {
                 value={number}
                 onChange={onNumberType}
                 type="tel"
-                minLength="5"
-                maxLength="15"
+                minLength={5}
+                maxLength={15}
                 placeholder="Enter your number!"
                 id="mobile-number"
                 required
@@ -91,7 +93,7 @@ function App() {
 
             </div>
             <button onClick={openWhatsapp} id="message">
-              <img src="logo192.png" alt="logo" /> <strong>Send Message</strong>{" "}
+              <img src="pwa-192x192.png" alt="logo" /> <strong>Send Message</strong>{" "}
             </button>
           </div>
           <footer>
@@ -101,7 +103,7 @@ function App() {
                 api to redirect the contact number.
               </p>
               <p style={{ marginTop: 0 }}>
-                Created with <img width="20" src="heart.svg" alt="heart" /> by{" "}
+                Created with <img width="20" src={heart} alt="heart" /> by{" "}
                 <a rel="noopener" href="https://twitter.com/bilal8492" target="_blank">
                   Bilal
                 </a>
@@ -127,4 +129,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
