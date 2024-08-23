@@ -66,7 +66,7 @@ function App() {
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
 
-      <div className="App flex flex-col min-h-screen justify-center items-center">
+      <div className="App flex flex-col min-h-screen justify-center items-center p-5">
         <div className="w-full max-w-md flex justify-end items-end">
           <ModeToggle />
         </div>
