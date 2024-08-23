@@ -121,7 +121,7 @@ function App() {
             <Button className="w-full" onClick={openWhatsapp}>
               <Send className='pr-2' /><strong>Send Message</strong>{" "}
             </Button>
-            <Alert className='w-500 mt-8'>
+            <Alert className='w-500 mt-10'>
               <CircleAlert className="h-5 w-5" />
               <AlertDescription className='text-xs'>
                 This application is not associated with <strong>WhatsApp</strong> and It uses <strong>WhatsApp </strong>
