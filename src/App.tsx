@@ -5,7 +5,6 @@ import './App.css'
 import { Button } from './components/ui/button';
 import { ThemeProvider } from './components/theme-provider';
 import { ModeToggle } from './components/mode-toggle';
-import { Card, CardContent, CardFooter } from './components/ui/card';
 import { Label } from './components/ui/label';
 import { Input } from './components/ui/input';
 import { CircleAlert, ExternalLink, Heart, Send } from 'lucide-react';
