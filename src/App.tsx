@@ -66,19 +66,20 @@ function App() {
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
 
-      <div className="App flex flex-col min-h-screen justify-center items-center p-5">
-        <div className="w-full max-w-md flex justify-end items-end">
+      <div className="App flex flex-col min-h-screen justify-center items-center p-5 md:p-2 relative">
+        {/* Updated top container with centered alignment and small gap */}
+        <div className="w-full max-w-md flex justify-center items-center absolute top-2 left-1/2 transform -translate-x-1/2 gap-1 px-4">
+          <Alert className='text-sm'>
+            <Send className="h-5 w-5" />
+            <AlertTitle>WhatSend! </AlertTitle>
+            <AlertDescription>
+              Send <strong>Whatsapp</strong> messages without saving contact number.
+            </AlertDescription>
+          </Alert>
           <ModeToggle />
         </div>
-        <Alert className='w-full max-w-md mt-4'>
-          <Send className="h-5 w-5" />
-          <AlertTitle>WhatSend! </AlertTitle>
-          <AlertDescription>
-            Send <strong>Whatsapp</strong> messages without saving contact number.
-          </AlertDescription>
-        </Alert>
 
-        <Card className="w-full max-w-md mt-4 pt-5">
+        <Card className="w-full max-w-md mt-16 pt-5">
           <CardContent className="grid gap-4">
             <div className="grid gap-2">
               <Label htmlFor="email">Select Country Code:</Label>
@@ -105,7 +106,7 @@ function App() {
             <div className="grid gap-2">
               <Label htmlFor="mobile-number">Enter Phone Number:</Label>
               <Input
-                className='shadow'
+                className='shadow text-lg p-4'
                 value={number}
                 onChange={onNumberType}
                 type="tel"
@@ -121,35 +122,36 @@ function App() {
             <Button className="w-full" onClick={openWhatsapp}>
               <Send className='pr-2' /><strong>Send Message</strong>{" "}
             </Button>
-            <Alert className='w-500 mt-10'>
-              <CircleAlert className="h-5 w-5" />
-              <AlertDescription className='text-xs'>
-                This application is not associated with <strong>WhatsApp</strong> and It uses <strong>WhatsApp </strong>
-                api to redirect the contact number.
 
-                <p>
-                  Created with <Heart className='inline' /> by <a rel="noopener" href="https://twitter.com/bilal8492" target="_blank">
-                    Bilal
-                  </a>
-                  . Source code available at {" "}
-                  <a className=' font-bold underline' rel="noopener" href="https://github.com/bilal8492/whatSend" target="_blank">
-                    Github
-                  </a>
-                  <ExternalLink className='inline h-3' />
-                </p>
-                <p>
-                  For any feedback and bug report create an {" "}
-                  <a className='bold underline' rel="noopener"
-                    href="https://github.com/bilal8492/WhatSend/issues"
-                    target="_blank"
-                  >
-                    Issue
-                  </a><ExternalLink className='inline h-3' />
-                </p>
-              </AlertDescription>
-            </Alert>
           </CardFooter>
         </Card>
+        <Alert className='w-full max-w-md mt-10 text-xs absolute bottom-2 left-1/2 transform -translate-x-1/2'>
+          <CircleAlert className="h-5 w-5" />
+          <AlertDescription className='text-xs'>
+            This application is not associated with <strong>WhatsApp</strong> and It uses <strong>WhatsApp </strong>
+            api to redirect the contact number.
+
+            <p>
+              Created with <Heart className='inline' /> by <a rel="noopener" href="https://twitter.com/bilal8492" target="_blank">
+                Bilal
+              </a>
+              . Source code available at {" "}
+              <a className=' font-bold underline' rel="noopener" href="https://github.com/bilal8492/whatSend" target="_blank">
+                Github
+              </a>
+              <ExternalLink className='inline h-3' />
+            </p>
+            <p>
+              For any feedback and bug report create an {" "}
+              <a className='bold underline' rel="noopener"
+                href="https://github.com/bilal8492/WhatSend/issues"
+                target="_blank"
+              >
+                Issue
+              </a><ExternalLink className='inline h-3' />
+            </p>
+          </AlertDescription>
+        </Alert>
       </div>
 
     </ThemeProvider>
